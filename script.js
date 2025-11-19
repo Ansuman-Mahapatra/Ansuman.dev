@@ -2,6 +2,12 @@
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
+window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.body.classList.add('loaded');
+        }, 2500);
+    });
+
 function setTheme(theme) {
     body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);

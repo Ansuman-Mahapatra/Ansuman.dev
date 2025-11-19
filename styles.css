@@ -30,6 +30,103 @@
     --hover-color: #0056b3;
 }
 
+/* DARK CYBERPUNK LOADER – 5 seconds */
+#dark-loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #0a0020 0%, #000 70%);
+}
+
+.particles::before,
+.particles::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--accent-color);
+    animation: float 8s infinite linear;
+}
+
+.particles::before {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.particles::after {
+    top: 60%;
+    right: 30%;
+    animation-delay: 3s;
+    background: #00ff88;
+    box-shadow: 0 0 20px #00ff88;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100px) scale(1); opacity: 0; }
+}
+
+.reveal-text {
+    font-size: 5.5rem;
+    font-weight: 900;
+    letter-spacing: 12px;
+    background: linear-gradient(90deg, #00d4ff, #00ff88, #ff00aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0;
+    animation: revealName 5s forwards;
+    text-shadow: 0 0 40px rgba(0, 212, 255, 0.6);
+}
+
+.tagline {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #00d4ff;
+    opacity: 0;
+    animation: fadeIn 2s 2s forwards;
+    letter-spacing: 6px;
+    font-weight: 300;
+}
+
+@keyframes revealName {
+    0% { opacity: 0; transform: translateY(50px); filter: blur(10px); }
+    30% { opacity: 1; transform: translateY(0); filter: blur(0); }
+    70% { opacity: 1; }
+    100% { opacity: 0; filter: blur(20px); }
+}
+
+@keyframes fadeIn {
+    to { opacity : 0.7};
+}
+
+/* Hide loader after 5 seconds */
+body.loaded #dark-loader {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-out;
+    pointer-events: none;
+}
+
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
@@ -267,7 +364,7 @@ section h2::after {
     line-height: 1.6;
 }
 
-/* Projects */
+/* Projects
 #projects {
     background-color: var(--section-bg);
 }
@@ -316,6 +413,133 @@ section h2::after {
 .project p {
     color: var(--text-secondary);
     line-height: 1.7;
+} */
+
+/* Projects */
+#projects {
+    background-color: var(--section-bg);
+    padding: 20px 0;
+}
+
+/* Category headings – Java Desktop, Java Backend, Full-Stack */
+#projects h3 {
+    font-size: 2.1rem;
+    margin: 4.5rem 0 2rem 0;
+    color: var(--accent-color);
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+#projects h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), #00ff88);
+    border-radius: 2px;
+}
+
+/* Grid container */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Individual project cards */
+.project {
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 2.3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border-left: 5px solid transparent;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--accent-color), #00ff88);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.45s ease;
+}
+
+.project:hover::before {
+    transform: scaleX(1);
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0, 212, 255, 0.25);
+    border-color: var(--accent-color);
+    border-left-color: var(--accent-color);
+}
+
+/* Project title inside cards */
+.project h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.38rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-color), #00ff88);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Project description */
+.project p {
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
+/* Tech tags */
+.tech {
+    display: inline-block;
+    background: rgba(0, 212, 255, 0.15);
+    color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+}
+
+.tech:hover {
+    background: var(--accent-color);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Light mode support for tech tags */
+[data-theme="light"] .tech {
+    background: rgba(0, 123, 255, 0.12);
+    color: #007bff;
+    border-color: rgba(0, 123, 255, 0.3);
+}
+
+[data-theme="light"] .tech:hover {
+    background: #007bff;
+    color: white;
 }
 
 /* AI Integrations */

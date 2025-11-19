@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,16 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+    <!-- DARK CYBERPUNK LOADER -->
+    <div id="dark-loader">
+        <div class="particles"></div>
+        <div class="reveal-text">ANSUMAN</div>
+        <div class="tagline">Loading the matrix...</div>
+    </div>
+
     <header>
         <nav>
             <div class="nav-container">
@@ -24,60 +34,125 @@
         </nav>
     </header>
     <section id="hero">
-        <img src="images/placeholder.jpg" alt="Ansuman - Backend Developer & AI Integration Engineer" class="profile-pic">
+        <img src="images/placeholder.jpg" alt="Ansuman - Backend Developer & AI Integration Engineer"
+            class="profile-pic">
         <h1>Ansuman</h1>
         <p class="tagline">Building scalable backend systems with intelligent AI integration</p>
         <div class="hero-links">
             <a href="https://github.com/Ansuman-Mahapatra" target="_blank" class="hero-link">GitHub</a>
-            <a href="https://www.linkedin.com/in/ansuman-mahapatra-30661a2b2/" target="_blank" class="hero-link">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ansuman-mahapatra-30661a2b2/" target="_blank"
+                class="hero-link">LinkedIn</a>
             <a href="Ansuman_Resume.pdf" target="_blank" class="hero-link">Resume</a>
         </div>
     </section>
     <section id="about">
         <h2>About Me</h2>
-        <p>As a Backend Developer & AI Integration Engineer, I specialize in creating robust, scalable systems that leverage the power of artificial intelligence. With expertise in Java, Spring Boot, Python, and databases like MySQL and MongoDB, I build solutions that drive innovation and efficiency.</p>
+        <p>As a Backend Developer & AI Integration Engineer, I specialize in creating robust, scalable systems that
+            leverage the power of artificial intelligence. With expertise in Java, Spring Boot, Python, and databases
+            like MySQL and MongoDB, I build solutions that drive innovation and efficiency.</p>
     </section>
     <section id="skills">
         <h2>Skills</h2>
+
         <div class="skills-category">
             <h3>Programming Languages</h3>
-            <p>Java, Python</p>
+            <p>C, C++, HTML5, CSS3, JavaScript (ES6+), Java, Python</p>
         </div>
+
         <div class="skills-category">
             <h3>Frameworks</h3>
-            <p>Spring Boot (Java), React.js (JavaScript)</p>
+            <p>Spring Boot, React.js, Node.js, Express.js, Next.js</p>
         </div>
+
         <div class="skills-category">
             <h3>Databases</h3>
-            <p>MongoDB (NoSQL), MySQL (Relational)</p>
+            <p>MongoDB, MySQL, PostgreSQL</p>
+        </div>
+
+        <div class="skills-category">
+            <h3>Tools & Technologies</h3>
+            <p>Docker, Apache Tomcat, Git, GitHub, Postman, IntelliJ IDEA, VS Code, Eclipse, Maven</p>
+        </div>
+
+        <div class="skills-category">
+            <h3>Cloud Platforms</h3>
+            <p>AWS (S3, Lambda, DynamoDB), Firebase, Render</p>
+        </div>
+
+        <div class="skills-category">
+            <h3>DevOps</h3>
+            <p>CI/CD Pipelines, GitHub Actions, Containerization (Docker), API Development & Testing</p>
+        </div>
+
+        <div class="skills-category">
+            <h3>Operating Systems</h3>
+            <p>Windows, Linux (Ubuntu, Kali)</p>
+        </div>
+
+        <div class="skills-category">
+            <h3>Soft Skills</h3>
+            <p>Problem-Solving, Team Collaboration, Adaptability, Time Management, Communication</p>
         </div>
     </section>
+
     <section id="projects">
         <h2>Projects</h2>
-
-        <div class="project">
-            <h3>Farmer-to-Farmer Direct Transfer System</h3>
-            <p>A Spring Boot–based backend project that enables direct product transfer between farmers, removing middlemen. It includes secure authentication, AI-powered price prediction, and real-time transaction tracking with MongoDB as the database.</p>
+        <h3>Java Desktop Applications</h3>
+        <div class="project-grid">
+            <div class="project">
+                <h4>Hotel Management System</h4>
+                <p>A complete hotel operations platform with room booking, customer check-in/out, employee & driver
+                    management, billing system, and real-time room status tracking.</p>
+                <span class="tech">Java Swing • MySQL • JDBC • rs2xml • JCalendar</span>
+            </div>
+            <div class="project">
+                <h4>Hospital Management System</h4>
+                <p>Full-featured hospital system managing patients, doctors, rooms, departments, appointments, and
+                    role-based access (Admin/Doctor/Reception).</p>
+                <span class="tech">Java Swing • MySQL • JDBC • Multi-user Login</span>
+            </div>
+            <div class="project">
+                <h4>University Management System</h4>
+                <p>Comprehensive university portal with student/faculty management, fee structure, marks entry,
+                    examination system, and leave applications.</p>
+                <span class="tech">Java Swing • MySQL • JDBC • Modular Design</span>
+            </div>
+            <div class="project">
+                <h4>Employee Management System</h4>
+                <p>Enterprise-level employee management with CRUD operations, salary tracking, dynamic user
+                    authentication, and permanent data storage.</p>
+                <span class="tech">Java Swing • MySQL • JDateChooser • rs2xml</span>
+            </div>
         </div>
-
-        <div class="project">
-            <h3>AI Voice Assistant</h3>
-            <p>A Python-based intelligent assistant capable of performing multiple tasks such as fetching weather updates, news, Wikipedia data, and translations. Integrated OpenAI API for conversational AI and task automation.</p>
+        <h3>Java Backend Projects</h3>
+        <div class="project-grid">
+            <div class="project">
+                <h4>Farmer-to-Farmer Direct Transfer System</h4>
+                <p>Spring Boot REST API enabling direct produce trading between farmers with AI-powered price
+                    prediction, JWT authentication, and real-time transaction logging.</p>
+                <span class="tech">Spring Boot • Spring Security • MongoDB • REST API • AI Integration</span>
+            </div>
         </div>
-
-        <div class="project">
-            <h3>Job Portal System</h3>
-            <p>A MERN stack project that connects job seekers and employers. Implemented role-based authentication, job posting, and application tracking with Node.js, Express.js, MongoDB, and React.js.</p>
-        </div>
-
-        <div class="project">
-            <h3>Real-Time Language Translator</h3>
-            <p>Developed a Tkinter-based desktop application integrating Google Translator and speech recognition APIs. It includes an admin login (MySQL-based) and startup animation for a professional UI experience.</p>
-        </div>
-
-        <div class="project">
-            <h3>Home Inventory Management System</h3>
-            <p>A web-based inventory management system developed using JavaScript and backend APIs. It allows users to add, edit, and filter items, manage categories, and track status efficiently through API integration.</p>
+        <h3>Full-Stack & Intelligent Systems</h3>
+        <div class="project-grid">
+            <div class="project">
+                <h4>AI Voice Assistant</h4>
+                <p>Intelligent desktop assistant capable of weather updates, news, Wikipedia search, translations, and
+                    natural conversations using OpenAI API.</p>
+                <span class="tech">Python • OpenAI • SpeechRecognition • pyttsx3 • Tkinter</span>
+            </div>
+            <div class="project">
+                <h4>Real-Time Language Translator</h4>
+                <p>Voice & text translator with 100+ language support, speech recognition, text-to-speech, admin panel,
+                    and startup animation.</p>
+                <span class="tech">Python • Tkinter • Googletrans • MySQL • Speech API</span>
+            </div>
+            <div class="project">
+                <h4>Home Inventory Management System (Team)</h4>
+                <p>Smart inventory tracker with category management, low-stock alerts, search/filter, and responsive
+                    dashboard.</p>
+                <span class="tech">React.js • Node.js • MongoDB • Tailwind • SpringBoot • RestAPI</span>
+            </div>
         </div>
     </section>
 
@@ -86,7 +161,8 @@
         <h2>AI Integrations</h2>
         <div class="ai-integration">
             <h3>Machine Learning Model Deployment</h3>
-            <p>Seamlessly integrating pre-trained ML models into backend systems for predictive analytics and automation.</p>
+            <p>Seamlessly integrating pre-trained ML models into backend systems for predictive analytics and
+                automation.</p>
         </div>
         <div class="ai-integration">
             <h3>Natural Language Processing</h3>
@@ -108,14 +184,16 @@
     </section>
     <footer>
         <p>&copy; 2023 <strong>Ansuman Mahapatra</strong> — Backend Developer | AI Enthusiast</p>
-        <p>Built with ❤️ using <span style="color:#61DBFB;">React</span> & <span style="color:#6DB33F;">Spring Boot</span></p>
-        <p>Connect with me on 
-            <a href="https://github.com/Ansuman-Mahapatra" target="_blank">GitHub</a> | 
-            <a href="https://www.linkedin.com/in/ansuman-mahapatra-30661a2b2/" target="_blank">LinkedIn</a> | 
+        <p>Built with ❤️ using <span style="color:#61DBFB;">React</span> & <span style="color:#6DB33F;">Spring
+                Boot</span></p>
+        <p>Connect with me on
+            <a href="https://github.com/Ansuman-Mahapatra" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/ansuman-mahapatra-30661a2b2/" target="_blank">LinkedIn</a> |
             <a href="mailto:ansumanmahapatre@gmail.com?subject=Hello%20Ansuman&body=Hi%20there,">Email</a>
         </p>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
