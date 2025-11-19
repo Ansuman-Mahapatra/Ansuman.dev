@@ -18,10 +18,6 @@ A modern, fast, and fully responsive personal portfolio showcasing my journey as
 - Google Fonts (Inter)
 - No frameworks – lightweight & blazing fast
 
-### Preview
-![Portfolio Screenshot](screenshot.png)  
-*(Add a screenshot of your site here for better visuals)*
-
 ### Quick Links
 - View Live → [ansuman-mahapatra.github.io/Ansuman.dev](https://ansuman-mahapatra.github.io/Ansuman.dev/)
 - Source Code → [github.com/ansuman-mahapatra/Ansuman.dev](https://github.com/ansuman-mahapatra/Ansuman.dev)
