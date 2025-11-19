@@ -2,10 +2,11 @@
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
+// Loader Screen
 window.addEventListener('load', () => {
         setTimeout(() => {
             document.body.classList.add('loaded');
-        }, 2500);
+        }, 5000); // 5 seconds
     });
 
 function setTheme(theme) {

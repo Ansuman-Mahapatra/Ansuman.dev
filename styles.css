@@ -1,4 +1,4 @@
-/* Reset and base styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +30,6 @@
     --hover-color: #0056b3;
 }
 
-/* DARK CYBERPUNK LOADER – 5 seconds */
 #dark-loader {
     position: fixed;
     top: 0; left: 0;
@@ -119,7 +118,6 @@
     to { opacity : 0.7};
 }
 
-/* Hide loader after 5 seconds */
 body.loaded #dark-loader {
     opacity: 0;
     visibility: hidden;
@@ -364,64 +362,12 @@ section h2::after {
     line-height: 1.6;
 }
 
-/* Projects
-#projects {
-    background-color: var(--section-bg);
-}
-
-.project {
-    background-color: var(--primary-color);
-    margin: 2rem 0;
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.project::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(180deg, var(--accent-color), #00ff88);
-    opacity: 0;
-    transition: var(--transition);
-}
-
-.project:hover::before {
-    opacity: 1;
-}
-
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px rgba(0, 212, 255, 0.15);
-    border-color: var(--accent-color);
-}
-
-.project h3 {
-    margin-bottom: 1rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--text-color);
-}
-
-.project p {
-    color: var(--text-secondary);
-    line-height: 1.7;
-} */
-
 /* Projects */
 #projects {
     background-color: var(--section-bg);
     padding: 20px 0;
 }
 
-/* Category headings – Java Desktop, Java Backend, Full-Stack */
 #projects h3 {
     font-size: 2.1rem;
     margin: 4.5rem 0 2rem 0;
